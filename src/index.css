@@ -53,8 +53,7 @@ input {
 button {
   cursor: pointer;
   border-style: none;
-  border-radius: 5px;
-  padding: 0.5em 0.6em;
+  outline: transparent;
 }
 
 .container {

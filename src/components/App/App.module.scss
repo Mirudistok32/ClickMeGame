@@ -9,3 +9,11 @@
   justify-content: center;
   width: 100%;
 }
+.display__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 450px;
+  padding: 5px;
+  width: 100%;
+}

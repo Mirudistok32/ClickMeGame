@@ -2,15 +2,22 @@ import React from 'react';
 import s from './Count.module.scss'
 
 
-export const Count = () => {
+type PropsType = {
+  count: number
+}
 
-  let titleBoxClass = [s.title__box];
-  let displayBoxClass = [s.display__box];
-  let groupButtonsBoxClass = [s['group-buttons__box']];
+export const Count: React.FC<PropsType> = (props) => {
+
+  const { count } = props
+
+  let titleBoxClass = [s.count].join(' ');
+
 
   return (
-    <div className="count">
-      
+    <div className={titleBoxClass}>
+      {
+        count
+      }
     </div>
   );
 }

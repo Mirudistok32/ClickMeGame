@@ -1,16 +1,26 @@
 import React from 'react';
 import s from './Button.module.scss'
 
+type PropsType = {
+  title: string
+  onChangeCount?: () => void
+}
 
-export const Button = () => {
+export const Button: React.FC<PropsType> = (props) => {
 
-  let titleBoxClass = [s.title__box];
-  let displayBoxClass = [s.display__box];
-  let groupButtonsBoxClass = [s['group-buttons__box']];
+  const { title, onChangeCount } = props
+
+  let buttonClass = [s.button].join(' ');
+
+  const handleClick = () => {
+    onChangeCount && onChangeCount()
+  }
 
   return (
-    <div className="count">
-      
-    </div>
+    <button className={buttonClass} onClick={handleClick}>
+      {
+        title
+      }
+    </button>
   );
 }

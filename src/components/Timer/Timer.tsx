@@ -1,28 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import s from './Timer.module.scss'
+import { TimeType } from '../App/App';
 
 
 type PropsType = {
-  count: number
+  time: TimeType
 }
 
 export const Timer: React.FC<PropsType> = (props) => {
 
-  const { count } = props
-  const [second, setSecond] = useState<number>(count)
+  const { time } = props
+
+
+
 
   let timerClass = [s.timer].join(' ');
 
-  const changeCount = () => {
-
-  }
-  
-
-
   return (
-    <div className={timerClass} onClick={changeCount}>
+    <div className={timerClass} >
       {
-        second
+        time.s >= 10 ? time.s : '0' + time.s
       }
     </div>
   );
