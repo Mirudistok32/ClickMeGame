@@ -1,10 +1,15 @@
 html,
 body,
-#root {
+#root,
+.app {
   box-sizing: border-box;
-  background-color: #2d2d2d;
-  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: snow;
 }
 
 *,
@@ -45,4 +50,16 @@ button {
   border-style: none;
   border-radius: 5px;
   padding: 0.5em 0.6em;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #2d2d2d;
+  min-height: 100%;
+  padding: 100px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0 4px deepskyblue;
 }
