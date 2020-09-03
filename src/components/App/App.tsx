@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './App.module.scss'
 import { Title } from '../Title/Title';
+import { Timer } from '../Timer/Timer';
 
 
 export function App() {
@@ -19,7 +20,7 @@ export function App() {
           <Title title={'Click Me Game!'} />
         </div>
         <div className={timerBoxClass}>
-          {/* TimerBox */}
+          <Timer count={10} />
           {/* <Settings /> */}
         </div>
         <div className={displayBoxClass}>
