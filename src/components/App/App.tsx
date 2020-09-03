@@ -20,7 +20,7 @@ export function App() {
           <Title title={'Click Me Game!'} />
         </div>
         <div className={timerBoxClass}>
-          <Timer count={10} />
+          <Timer count={0} />
           {/* <Settings /> */}
         </div>
         <div className={displayBoxClass}>
