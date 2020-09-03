@@ -7,6 +7,7 @@ export function App() {
 
   let appClass = [s.app, 'app'].join(' ')
   let titleBoxClass = [s.title__box].join(' ')
+  let timerBoxClass = [s.timer__box].join(' ')
   let displayBoxClass = [s.display__box].join(' ')
   let groupButtonsBoxClass = [s['group-buttons__box']].join(' ')
 
@@ -15,12 +16,14 @@ export function App() {
     <div className={appClass}>
       <div className="container">
         <div className={titleBoxClass}>
-          <Title title={'Click Me Please!'} />
-          {/* <Title /> */}
+          <Title title={'Click Me Game!'} />
+        </div>
+        <div className={timerBoxClass}>
+          {/* TimerBox */}
+          {/* <Settings /> */}
         </div>
         <div className={displayBoxClass}>
           {/* <Count /> */}
-          {/* <Settings /> */}
         </div>
         <div className={groupButtonsBoxClass}>
           {/* <Button /> */}
