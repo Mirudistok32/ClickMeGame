@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import s from './App.module.scss'
 import { Title } from '../Title/Title';
 import { Timer } from '../Timer/Timer';
@@ -23,7 +23,6 @@ const timeDefault: TimeType = {
 export function App() {
 
   const [time, setTime] = useState<TimeType>(timeDefault)
-  const [maxValue, setMaxValue] = useState<number>(time.s)
   const [count, setCount] = useState<number>(0)
   const [interv, setInterv] = useState<number>(0)
   const [active, setActive] = useState<boolean>(true)
@@ -47,13 +46,10 @@ export function App() {
     setActive(false)
     setInterv(window.setInterval(run, 10))
   }
+  const stop = useCallback(() => {
+    window.clearInterval(interv)
+  }, [interv])
 
-  useEffect(() => {
-    if (time.s === 5) {
-      stop()
-      setActive(true)
-    }
-  }, [time.s])
 
   const run = () => {
     if (updateM === 60) {
@@ -73,9 +69,13 @@ export function App() {
     return setTime({ h: updateH, m: updateM, s: updateS, ms: updateMs })
   }
 
-  const stop = () => {
-    window.clearInterval(interv)
-  }
+  useEffect(() => {
+    if (time.s === 5) {
+      stop()
+      setActive(true)
+    }
+  }, [time.s, stop])
+
 
   let appClass = [s.app, 'app'].join(' ')
   let titleBoxClass = [s.title__box].join(' ')
