@@ -1,25 +1,23 @@
 import React from 'react';
-import s from './Button.module.scss'
+import s from './ButtonClick.module.scss'
 
 type PropsType = {
   title: string
   onChangeCount?: () => void
-  stop?: () => void
-  onClick?: () => void
-  disabled?: boolean
+  start?: () => void
+  disabled: boolean
 }
 
-export const Button: React.FC<PropsType> = (props) => {
+export const ButtonClick: React.FC<PropsType> = (props) => {
 
-  const { title, onChangeCount, stop, onClick, disabled } = props
+  const { title, onChangeCount, start, disabled } = props
 
   let buttonClass = [s.button];
   if(disabled) buttonClass.push(s.disabled)
 
   const handleClick = () => {
     onChangeCount && onChangeCount()
-    stop && stop()
-    onClick && onClick()
+    start && start()
   }
 
   return (

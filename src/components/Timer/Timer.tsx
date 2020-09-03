@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import s from './Timer.module.scss'
 import { TimeType } from '../App/App';
 
@@ -10,8 +10,6 @@ type PropsType = {
 export const Timer: React.FC<PropsType> = (props) => {
 
   const { time } = props
-
-
 
 
   let timerClass = [s.timer].join(' ');

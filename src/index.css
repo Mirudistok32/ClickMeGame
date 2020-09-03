@@ -54,6 +54,7 @@ button {
   cursor: pointer;
   border-style: none;
   outline: transparent;
+  color: #2d2d2d;
 }
 
 .container {
