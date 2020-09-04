@@ -96,7 +96,6 @@ export function App() {
         <div className={timerBoxClass.join(' ')}>
           <Timer time={time} />
         </div>
-        <div className={spanBoxClass.join(' ')}>
           <span>
             {
               `You have ${maxValue} seconds`
