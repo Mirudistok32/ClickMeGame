@@ -12,13 +12,23 @@ export const Timer: React.FC<PropsType> = (props) => {
   const { time } = props
 
 
-  let timerClass = [s.timer].join(' ');
+  let timerSClass = [s.timer__s];
+  let timerMSClass = [s.timer__ms];
+  let timerClass = [s.timer];
+  if (time.ms === 0) timerClass.push(s.timer__active)
 
   return (
-    <div className={timerClass} >
-      {
-        time.s >= 10 ? time.s : '0' + time.s
-      }
+    <div className={timerClass.join(' ')}>
+      <div className={timerSClass.join(' ')}>
+        {
+          time.s >= 10 ? time.s : '0' + time.s
+        }
+      </div>
+      <div className={timerMSClass.join(' ')}>
+        {
+          time.ms >= 10 ? time.ms : '0' + time.ms
+        }
+      </div>
     </div>
   );
 }

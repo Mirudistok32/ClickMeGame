@@ -22,10 +22,12 @@ const timeDefault: TimeType = {
 
 export function App() {
 
+  const [maxValue, setMaxValue] = useState<number>(5)
   const [time, setTime] = useState<TimeType>(timeDefault)
   const [count, setCount] = useState<number>(0)
   const [interv, setInterv] = useState<number>(0)
   const [active, setActive] = useState<boolean>(true)
+
 
   let updateMs = time.ms
   let updateS = time.s
@@ -37,7 +39,7 @@ export function App() {
   }
 
   const resetCount = () => {
-    setTime({ ...time, s: 0 })
+    setTime({ ...time, s: 0, ms: 0 })
     setCount(0)
   }
 
@@ -70,34 +72,42 @@ export function App() {
   }
 
   useEffect(() => {
-    if (time.s === 5) {
+    if (time.s === maxValue) {
       stop()
       setActive(true)
     }
-  }, [time.s, stop])
+  }, [time.s, stop, maxValue])
 
 
-  let appClass = [s.app, 'app'].join(' ')
-  let titleBoxClass = [s.title__box].join(' ')
-  let timerBoxClass = [s.timer__box].join(' ')
-  let displayBoxClass = [s.display__box].join(' ')
-  let groupButtonsBoxClass = [s['group-buttons__box']].join(' ')
+  let appClass = [s.app, 'app']
+  let titleBoxClass = [s.title__box]
+  let timerBoxClass = [s.timer__box]
+  let spanBoxClass = [s.span__box]
+  let displayBoxClass = [s.display__box]
+  let groupButtonsBoxClass = [s['group-buttons__box']]
 
 
   return (
-    <div className={appClass}>
+    <div className={appClass.join(' ')}>
       <div className="container">
-        <div className={titleBoxClass}>
+        <div className={titleBoxClass.join(' ')}>
           <Title title={'Click Me Game!'} />
         </div>
-        <div className={timerBoxClass}>
+        <div className={timerBoxClass.join(' ')}>
           <Timer time={time} />
         </div>
-        <div className={displayBoxClass}>
+        <div className={spanBoxClass.join(' ')}>
+          <span>
+            {
+              `You have ${maxValue} seconds`
+            }
+          </span>
+        </div>
+        <div className={displayBoxClass.join(' ')}>
           <Count count={count} />
           <ButtonClick title={'Click'} onChangeCount={changeCount} disabled={active} />
         </div>
-        <div className={groupButtonsBoxClass}>
+        <div className={groupButtonsBoxClass.join(' ')}>
           <Button title={'Reset'} onChangeCount={resetCount} stop={stop} disabled={!active || time.s === 0} />
           <Button title={'New game'} onClick={start} disabled={!active || time.s > 0} />
         </div>

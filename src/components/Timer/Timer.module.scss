@@ -1,7 +1,27 @@
 .timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 6em;
-  max-width: 3em;
-  width: 100%;
   color: deepskyblue;
+  // background-color: darkseagreen;
+  height: 100px;
+  & > div {
+    height: 100%;
+    // background-color: darkslategrey;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+  &__s {
+    font-size: 6em;
+  }
+  &__ms {
+    font-size: 3em;
+  }
+  &__active {
+    color: crimson;
+  }
 }
