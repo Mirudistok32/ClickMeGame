@@ -22,7 +22,7 @@ const timeDefault: TimeType = {
 
 export function App() {
 
-  const [maxValue, setMaxValue] = useState<number>(5)
+  const [maxValue, setMaxValue] = useState<number>(10)
   const [time, setTime] = useState<TimeType>(timeDefault)
   const [count, setCount] = useState<number>(0)
   const [interv, setInterv] = useState<number>(0)
