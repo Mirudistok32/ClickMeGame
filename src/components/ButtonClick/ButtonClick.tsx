@@ -6,14 +6,16 @@ type PropsType = {
   onChangeCount?: () => void
   start?: () => void
   disabled: boolean
+  clickMe?: boolean
 }
 
 export const ButtonClick: React.FC<PropsType> = (props) => {
 
-  const { title, onChangeCount, start, disabled } = props
+  const { title, onChangeCount, start, disabled, clickMe } = props
 
   let buttonClass = [s.button];
   if(disabled) buttonClass.push(s.disabled)
+  if(clickMe) buttonClass.push(s.clickMe)
 
   const handleClick = () => {
     onChangeCount && onChangeCount()

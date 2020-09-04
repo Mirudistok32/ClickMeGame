@@ -27,6 +27,7 @@ export function App() {
   const [count, setCount] = useState<number>(0)
   const [interv, setInterv] = useState<number>(0)
   const [active, setActive] = useState<boolean>(true)
+  const [isButtonClick, setIsButtonClick] = useState<boolean>(true)
 
 
   let updateMs = time.ms
@@ -36,11 +37,13 @@ export function App() {
 
   const changeCount = () => {
     setCount(count + 1)
+    setIsButtonClick(false)
   }
 
   const resetCount = () => {
     setTime({ ...time, s: 0, ms: 0 })
     setCount(0)
+    setIsButtonClick(true)
   }
 
   const start = () => {
@@ -105,7 +108,7 @@ export function App() {
         </div>
         <div className={displayBoxClass.join(' ')}>
           <Count count={count} />
-          <ButtonClick title={'Click'} onChangeCount={changeCount} disabled={active} />
+          <ButtonClick title={'Click'} onChangeCount={changeCount} disabled={active} clickMe={!active && isButtonClick} />
         </div>
         <div className={groupButtonsBoxClass.join(' ')}>
           <Button title={'Reset'} onChangeCount={resetCount} stop={stop} disabled={!active || time.s === 0} />

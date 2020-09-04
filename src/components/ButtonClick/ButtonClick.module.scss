@@ -9,10 +9,14 @@
     color: snow;
   }
 }
-.disabled{
+.disabled {
   opacity: 0.5;
   &:hover {
     background-color: dodgerblue;
     color: #2d2d2d;
   }
+}
+.clickMe {
+  box-shadow: 0 0 10px 5px tomato;
+  color: gold;
 }
