@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ClickMeGame/static/css/main.0454c56a.chunk.css",
+    "main.css": "/ClickMeGame/static/css/main.1c1c0a5b.chunk.css",
     "main.js": "/ClickMeGame/static/js/main.391b2eff.chunk.js",
     "main.js.map": "/ClickMeGame/static/js/main.391b2eff.chunk.js.map",
     "runtime-main.js": "/ClickMeGame/static/js/runtime-main.54e827ad.js",
@@ -8,15 +8,15 @@
     "static/js/2.a5866b6a.chunk.js": "/ClickMeGame/static/js/2.a5866b6a.chunk.js",
     "static/js/2.a5866b6a.chunk.js.map": "/ClickMeGame/static/js/2.a5866b6a.chunk.js.map",
     "index.html": "/ClickMeGame/index.html",
-    "precache-manifest.e9705bcfef3884e2dd3cd74991cb668c.js": "/ClickMeGame/precache-manifest.e9705bcfef3884e2dd3cd74991cb668c.js",
+    "precache-manifest.f9e758bc90820e205143b05397e38e55.js": "/ClickMeGame/precache-manifest.f9e758bc90820e205143b05397e38e55.js",
     "service-worker.js": "/ClickMeGame/service-worker.js",
-    "static/css/main.0454c56a.chunk.css.map": "/ClickMeGame/static/css/main.0454c56a.chunk.css.map",
+    "static/css/main.1c1c0a5b.chunk.css.map": "/ClickMeGame/static/css/main.1c1c0a5b.chunk.css.map",
     "static/js/2.a5866b6a.chunk.js.LICENSE.txt": "/ClickMeGame/static/js/2.a5866b6a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.54e827ad.js",
     "static/js/2.a5866b6a.chunk.js",
-    "static/css/main.0454c56a.chunk.css",
+    "static/css/main.1c1c0a5b.chunk.css",
     "static/js/main.391b2eff.chunk.js"
   ]
 }
