@@ -40,7 +40,13 @@
   }
   .display__box {
     flex-direction: column;
-    margin-bottom: 2.8em;
+    margin-bottom: 2.4em;
+  }
+}
+@media (max-width: 375px) {
+  .display__box {
+    flex-direction: column;
+    margin-bottom: 1.5em;
   }
 }
 @media (max-width: 320px) {

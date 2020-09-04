@@ -72,5 +72,12 @@ button {
 @media (max-width: 414px) {
   .container {
     padding: 30px 0 0px;
+    justify-content: center;
+  }
+}
+@media (max-width: 320px) {
+  .container {
+    padding: 30px 0 0px;
+    justify-content: flex-start;
   }
 }
