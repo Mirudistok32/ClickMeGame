@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b3ee0caf5a0c24f59201f3fff6dbc43",
+    "revision": "edb1727a36a68b5e78f36c299586223a",
     "url": "/ClickMeGame/index.html"
   },
   {
-    "revision": "9862011e2fb59117ce11",
-    "url": "/ClickMeGame/static/css/main.f381efaa.chunk.css"
+    "revision": "05630f9257f63036bb57",
+    "url": "/ClickMeGame/static/css/main.cce75cf7.chunk.css"
   },
   {
     "revision": "4fbb2e77bf5d6cd3fff7",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ClickMeGame/static/js/2.a5866b6a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9862011e2fb59117ce11",
+    "revision": "05630f9257f63036bb57",
     "url": "/ClickMeGame/static/js/main.391b2eff.chunk.js"
   },
   {
