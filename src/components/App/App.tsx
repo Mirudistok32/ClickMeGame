@@ -82,7 +82,6 @@ export function App() {
   let appClass = [s.app, 'app']
   let titleBoxClass = [s.title__box]
   let timerBoxClass = [s.timer__box]
-  let spanBoxClass = [s.span__box]
   let displayBoxClass = [s.display__box]
   let groupButtonsBoxClass = [s['group-buttons__box']]
 
@@ -96,20 +95,19 @@ export function App() {
         <div className={timerBoxClass.join(' ')}>
           <Timer time={time} />
         </div>
-          <span>
-            {
-              `You have ${maxValue} seconds`
-            }
-          </span>
-        </div>
-        <div className={displayBoxClass.join(' ')}>
-          <Count count={count} />
-          <ButtonClick title={'Click'} onChangeCount={changeCount} disabled={active} />
-        </div>
-        <div className={groupButtonsBoxClass.join(' ')}>
-          <Button title={'Reset'} onChangeCount={resetCount} stop={stop} disabled={!active || time.s === 0} />
-          <Button title={'New game'} onClick={start} disabled={!active || time.s > 0} />
-        </div>
+        <span>
+          {
+            `You have ${maxValue} seconds`
+          }
+        </span>
+      </div>
+      <div className={displayBoxClass.join(' ')}>
+        <Count count={count} />
+        <ButtonClick title={'Click'} onChangeCount={changeCount} disabled={active} />
+      </div>
+      <div className={groupButtonsBoxClass.join(' ')}>
+        <Button title={'Reset'} onChangeCount={resetCount} stop={stop} disabled={!active || time.s === 0} />
+        <Button title={'New game'} onClick={start} disabled={!active || time.s > 0} />
       </div>
     </div>
   );
