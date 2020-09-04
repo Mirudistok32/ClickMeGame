@@ -16,3 +16,11 @@
     color: #2d2d2d;
   }
 }
+
+@media (max-width: 414px) {
+  .button {
+    font-size: 0.8em;
+    padding: 2em;
+    margin: 0 2px;
+  }
+}

@@ -15,3 +15,9 @@
     transform: translateY(-10px);
   }
 }
+
+@media(max-width: 414px) {
+  .title{
+    font-size: 2em;
+  } 
+}

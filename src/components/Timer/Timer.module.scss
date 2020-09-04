@@ -25,3 +25,31 @@
     color: crimson;
   }
 }
+@media (max-width: 414px) {
+  .timer {
+    height: 70px;
+    & > div {
+      width: 65px;
+    }
+    &__s {
+      font-size: 4em;
+    }
+    &__ms {
+      font-size: 1.5em;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .timer {
+    height: 45px;
+    & > div {
+      width: 40px;
+    }
+    &__s {
+      font-size: 3em;
+    }
+    &__ms {
+      font-size: 1em;
+    }
+  }
+}

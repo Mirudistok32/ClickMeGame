@@ -68,3 +68,9 @@ button {
   align-items: center;
   box-shadow: 0 0 0 4px deepskyblue;
 }
+
+@media (max-width: 414px) {
+  .container {
+    padding: 50px 0 0px;
+  }
+}

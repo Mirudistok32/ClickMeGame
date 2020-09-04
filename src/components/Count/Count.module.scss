@@ -1,3 +1,9 @@
-.count{
-    font-size: 10em;
+.count {
+  font-size: 10em;
+}
+
+@media (max-width: 414px) {
+  .count {
+    font-size: 7em;
+  }
 }
