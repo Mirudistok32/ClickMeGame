@@ -74,3 +74,8 @@ button {
     padding: 50px 0 0px;
   }
 }
+@media (max-width: 320px) {
+  .container {
+    padding: 20px 0 0px;
+  }
+}
