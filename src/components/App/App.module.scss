@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 450px;
-  padding: 5px;
+  padding: 5px 50px;
   width: 100%;
   margin-bottom: 70px;
 }
@@ -31,19 +31,24 @@
     margin-bottom: 1em;
   }
 }
+@media (max-width: 456px) {
+  .display__box {
+    margin-bottom: 1em;
+    padding: 0 70px;
+  }
+  .timer__box {
+    margin-bottom: 0.8em;
+  }
+  .span__box{
+    margin-bottom: 5px;
+  }
+}
 @media (max-width: 414px) {
   .title__box {
     margin-bottom: 0.9em;
   }
-  .timer__box {
-    margin-bottom: 0.9em;
-  }
   .display__box {
     flex-direction: column;
-    margin-bottom: 2.4em;
-  }
-  .span__box{
-    margin-bottom: 10px;
   }
 }
 @media (max-width: 375px) {

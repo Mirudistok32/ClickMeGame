@@ -2,6 +2,11 @@
   font-size: 10em;
 }
 
+@media (max-width: 456px) {
+  .count {
+    font-size: 7.1em;
+  }
+}
 @media (max-width: 414px) {
   .count {
     font-size: 7em;
