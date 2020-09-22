@@ -25,6 +25,12 @@
   box-shadow: inset 0 0 0px 10px #2d2d2d, inset 0 0 30px 10px #000;
 }
 
+@media (max-width: 600px) {
+  .button {
+    font-size: 2em;
+    padding: 1.5em 1em;
+  }
+}
 @media (max-width: 414px) {
   .button {
     font-size: 1.5em;

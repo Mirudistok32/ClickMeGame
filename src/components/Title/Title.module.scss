@@ -16,6 +16,11 @@
   }
 }
 
+@media(max-width: 600px) {
+  .title{
+    font-size: 3em;
+  } 
+}
 @media(max-width: 414px) {
   .title{
     font-size: 2em;
