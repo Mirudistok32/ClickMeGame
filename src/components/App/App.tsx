@@ -22,6 +22,7 @@ const timeDefault: TimeType = {
 
 export function App() {
 
+   /* eslint-disable */
   const [maxValue, setMaxValue] = useState<number>(10)
   const [time, setTime] = useState<TimeType>(timeDefault)
   const [count, setCount] = useState<number>(0)
