@@ -9,7 +9,7 @@ type PropsType = {
   clickMe?: boolean
 }
 
-export const ButtonClick: React.FC<PropsType> = (props) => {
+export const ButtonClick: React.FC<PropsType> = React.memo((props) => {
 
   const { title, onChangeCount, start, disabled, clickMe } = props
 
@@ -42,4 +42,4 @@ export const ButtonClick: React.FC<PropsType> = (props) => {
       }
     </button>
   );
-}
+})

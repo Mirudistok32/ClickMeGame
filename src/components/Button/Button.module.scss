@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400&display=swap");
 .button {
-  font-size: 1em;
-  padding: 2em;
+  font-family: "Epilogue", sans-serif;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
   background-color: dodgerblue;
-  border-radius: 3px;
+  border-radius: 30px;
   margin: 0 2px;
   &:hover {
     background-color: lightseagreen;

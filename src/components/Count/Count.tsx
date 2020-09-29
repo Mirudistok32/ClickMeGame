@@ -6,7 +6,7 @@ type PropsType = {
   count: number
 }
 
-export const Count: React.FC<PropsType> = (props) => {
+export const Count: React.FC<PropsType> = React.memo((props) => {
 
   const { count } = props
 
@@ -20,4 +20,4 @@ export const Count: React.FC<PropsType> = (props) => {
       }
     </div>
   );
-}
+})

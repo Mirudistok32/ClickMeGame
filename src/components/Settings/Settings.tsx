@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Settings.module.scss'
 
 
-export const Settings = () => {
+export const Settings = React.memo(() => {
 
   let titleBoxClass = [s.title__box];
   let displayBoxClass = [s.display__box];
@@ -13,4 +13,4 @@ export const Settings = () => {
       
     </div>
   );
-}
+})

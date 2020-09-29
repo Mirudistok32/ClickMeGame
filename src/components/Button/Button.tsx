@@ -9,7 +9,7 @@ type PropsType = {
   disabled?: boolean
 }
 
-export const Button: React.FC<PropsType> = (props) => {
+export const Button: React.FC<PropsType> = React.memo((props) => {
 
   const { title, onChangeCount, stop, onClick, disabled } = props
 
@@ -29,4 +29,4 @@ export const Button: React.FC<PropsType> = (props) => {
       }
     </button>
   );
-}
+})

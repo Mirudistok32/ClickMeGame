@@ -66,7 +66,7 @@ export function App() {
       updateM++;
       updateS = 0;
     }
-    if (updateMs === 100) {
+    if (updateMs === 99) {
       updateS++;
       updateMs = 0;
     }
@@ -82,35 +82,27 @@ export function App() {
   }, [time.s, stop, maxValue])
 
 
-  let appClass = [s.app, 'app']
-  let titleBoxClass = [s.title__box]
-  let timerBoxClass = [s.timer__box]
-  let spanBoxClass = [s.span__box]
-  let displayBoxClass = [s.display__box]
-  let groupButtonsBoxClass = [s['group-buttons__box']]
-
-
   return (
-    <div className={appClass.join(' ')}>
+    <div className={s.app + ' app'}>
       <div className="container">
-        <div className={titleBoxClass.join(' ')}>
+        <div className={s.title__box}>
           <Title title={'Click Me Game!'} />
         </div>
-        <div className={timerBoxClass.join(' ')}>
+        <div className={s.timer__box}>
           <Timer time={time} />
         </div>
-        <div className={spanBoxClass.join(' ')}>
+        <div className={s.span__box}>
           <span>
             {
               `You have ${maxValue} seconds`
             }
           </span>
         </div>
-        <div className={displayBoxClass.join(' ')}>
+        <div className={s.display__box}>
           <Count count={count} />
           <ButtonClick title={'Click'} onChangeCount={changeCount} disabled={active} clickMe={!active && isButtonClick} />
         </div>
-        <div className={groupButtonsBoxClass.join(' ')}>
+        <div className={s['group-buttons__box']}>
           <Button title={'Reset'} onChangeCount={resetCount} stop={stop} disabled={!active || time.s === 0} />
           <Button title={'New game'} onClick={start} disabled={!active || time.s > 0} />
         </div>

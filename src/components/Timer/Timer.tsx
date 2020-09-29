@@ -7,7 +7,7 @@ type PropsType = {
   time: TimeType
 }
 
-export const Timer: React.FC<PropsType> = (props) => {
+export const Timer: React.FC<PropsType> = React.memo((props) => {
 
   const { time } = props
 
@@ -31,4 +31,4 @@ export const Timer: React.FC<PropsType> = (props) => {
       </div>
     </div>
   );
-}
+})
