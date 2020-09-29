@@ -5,6 +5,7 @@ import { Timer } from '../Timer/Timer';
 import { ButtonClick } from '../ButtonClick/ButtonClick';
 import { Count } from '../Count/Count';
 import { Button } from '../Button/Button';
+import { Footer } from '../Footer';
 
 export type TimeType = {
   ms: number
@@ -111,6 +112,7 @@ export function App() {
           <Button title={'Reset'} onChangeCount={resetCount} stop={stop} disabled={!active || time.s === 0} />
           <Button title={'New game'} onClick={start} disabled={!active || time.s > 0} />
         </div>
+        <Footer />
       </div>
     </div>
   );
