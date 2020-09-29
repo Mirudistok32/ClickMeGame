@@ -22,7 +22,7 @@ const timeDefault: TimeType = {
 
 export function App() {
 
-   /* eslint-disable */
+  /* eslint-disable */
   const [maxValue, setMaxValue] = useState<number>(10)
   const [time, setTime] = useState<TimeType>(timeDefault)
   const [count, setCount] = useState<number>(0)
@@ -67,11 +67,15 @@ export function App() {
       updateM++;
       updateS = 0;
     }
-    if (updateMs === 99) {
+    if (updateMs === 100) {
       updateS++;
       updateMs = 0;
     }
     updateMs++;
+    if (time.s === maxValue) {
+      stop()
+      setActive(true)
+    }
     return setTime({ h: updateH, m: updateM, s: updateS, ms: updateMs })
   }
 

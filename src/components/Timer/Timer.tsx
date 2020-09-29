@@ -12,19 +12,17 @@ export const Timer: React.FC<PropsType> = React.memo((props) => {
   const { time } = props
 
 
-  let timerSClass = [s.timer__s];
-  let timerMSClass = [s.timer__ms];
   let timerClass = [s.timer];
   if (time.ms === 0) timerClass.push(s.timer__active)
 
   return (
     <div className={timerClass.join(' ')}>
-      <div className={timerSClass.join(' ')}>
+      <div className={s.timer__s}>
         {
           time.s >= 10 ? time.s : '0' + time.s
         }
       </div>
-      <div className={timerMSClass.join(' ')}>
+      <div className={s.timer__ms}>
         {
           time.ms >= 10 ? time.ms : '0' + time.ms
         }
